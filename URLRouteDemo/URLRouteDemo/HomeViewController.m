@@ -1,22 +1,22 @@
 //
-//  ViewController.m
+//  HomeViewController.m
 //  URLRouteDemo
 //
 //  Created by Black on 2018/2/26.
 //  Copyright © 2018年 Black. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomeViewController.h"
 
-@interface ViewController ()
+@interface HomeViewController ()
 
 @end
 
-@implementation ViewController
+@implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor redColor];
 }
 
 
