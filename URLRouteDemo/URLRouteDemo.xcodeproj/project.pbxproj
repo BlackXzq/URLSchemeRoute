@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9581DB9F20443715003507FF /* BKRouteConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 9581DB9E20443715003507FF /* BKRouteConfig.m */; };
 		C1314B592043AF6E00E43861 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1314B582043AF6E00E43861 /* AppDelegate.m */; };
 		C1314B5C2043AF6E00E43861 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1314B5B2043AF6E00E43861 /* HomeViewController.m */; };
 		C1314B5F2043AF6E00E43861 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1314B5D2043AF6E00E43861 /* Main.storyboard */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9581DB9D20443715003507FF /* BKRouteConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKRouteConfig.h; sourceTree = "<group>"; };
+		9581DB9E20443715003507FF /* BKRouteConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKRouteConfig.m; sourceTree = "<group>"; };
 		C1314B542043AF6E00E43861 /* URLRouteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLRouteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1314B572043AF6E00E43861 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C1314B582043AF6E00E43861 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 				C1314B6F2043B06B00E43861 /* BKRouteUri.m */,
 				C1314B712043B1C000E43861 /* BKRoutes.h */,
 				C1314B722043B1C000E43861 /* BKRoutes.m */,
+				9581DB9D20443715003507FF /* BKRouteConfig.h */,
+				9581DB9E20443715003507FF /* BKRouteConfig.m */,
 			);
 			path = RouteFile;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				C1314B7D2043DF6000E43861 /* AppConstants.m in Sources */,
 				C1314B842043F5E300E43861 /* UIWindow+Visible.m in Sources */,
 				C1314B702043B06B00E43861 /* BKRouteUri.m in Sources */,
+				9581DB9F20443715003507FF /* BKRouteConfig.m in Sources */,
 				C1314B812043EFF000E43861 /* UIViewController+top.m in Sources */,
 				C1314B672043AF6E00E43861 /* main.m in Sources */,
 				C1314B592043AF6E00E43861 /* AppDelegate.m in Sources */,
