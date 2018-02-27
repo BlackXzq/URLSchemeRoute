@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger, RouteCallbackOperation) {
 /**
  *  If you use this lib your UIViewControllers should confirm this protocol
  */
-@protocol HJRouteProtocol<NSObject>
+@protocol BKRouteProtocol<NSObject>
 @optional
 /**
  *  Wheather can open the route

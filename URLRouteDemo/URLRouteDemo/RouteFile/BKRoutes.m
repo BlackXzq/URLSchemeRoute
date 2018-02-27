@@ -139,7 +139,7 @@ static NSString *patternPrefix = @"bkroute://urlroute.black.com";
     if ([route.className length] != 0) {
         Class classType = NSClassFromString(route.className);
         NSAssert(classType != nil, @"[BKRoutes] Can't find %@ class", route.className);
-        NSAssert([classType conformsToProtocol:@protocol(HJRouteProtocol)], @"[BKRoutes] %@ not conform protocol: HJRouteProtocol", route.className);
+        NSAssert([classType conformsToProtocol:@protocol(BKRouteProtocol)], @"[BKRoutes] %@ not conform protocol: HJRouteProtocol", route.className);
     } else {
         NSAssert(route.block != NULL, @"[BKRoutes] Block is invalid");
     }
@@ -205,7 +205,7 @@ static NSString *patternPrefix = @"bkroute://urlroute.black.com";
     //Get View Controller Instance
     
     Class classType = NSClassFromString(target.className);
-    UIViewController<HJRouteProtocol> *vc = [self getViewController:classType];
+    UIViewController<BKRouteProtocol> *vc = [self getViewController:classType];
     if (!vc) {
         NSLog(@"[BKRoute] Error: Instance class failed");
         return NO;
@@ -391,7 +391,7 @@ static NSString *patternPrefix = @"bkroute://urlroute.black.com";
  *
  *  @return viewController
  */
-- (UIViewController<HJRouteProtocol> *)getViewController:(Class)classType {
+- (UIViewController<BKRouteProtocol> *)getViewController:(Class)classType {
     // TODO: May be change
 //    if ([classType resolveClassMethod:@selector(sharedInstance)]) {
 //        return [classType sharedInstance];

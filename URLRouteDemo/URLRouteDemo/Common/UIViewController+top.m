@@ -16,7 +16,7 @@
 }
 
 + (UIViewController *)baseViewControllerForController:(UIViewController *)controller {
-    if ([controller isKindOfClass:[UIViewController class]]) {
+    if ([controller isKindOfClass:[BaseViewController class]]) {
         return controller;
     } else if ([controller isKindOfClass:[UINavigationController class]]) {
         return [self baseViewControllerInNavigation:(UINavigationController *)controller];

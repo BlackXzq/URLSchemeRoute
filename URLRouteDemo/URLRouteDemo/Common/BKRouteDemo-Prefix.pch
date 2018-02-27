@@ -13,5 +13,8 @@
 #import "UIViewController+top.h"
 #import "UIWindow+Visible.h"
 #import "NSString+HJAddition.h"
+#import "BKRouteConfig.h"
+#import "BKRoutes.h"
+#import "BaseViewController.h"
 
 #endif /* BKRouteDemo_Prefix_pch */

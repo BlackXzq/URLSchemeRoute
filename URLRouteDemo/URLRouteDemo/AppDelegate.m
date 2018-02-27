@@ -23,8 +23,19 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = rootNav;
     [self.window makeKeyAndVisible];
+    [BKRouteConfig config];
     return YES;
 }
+
+
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    //打开链接会走这个方法
+    NSString *urlString = url.absoluteString;
+    NSLog(@"XXurl: %@",urlString);
+    [[BKRoutes defaultRoutes] routeUrl:urlString];
+    return YES;
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

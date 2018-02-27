@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <style type="text/css">
+            div {
+                margin: 50px;
+            }
+            #myButton {
+                position: absolute;
+                width: 100px;
+                height: 30px;
+                margin-top: 20px;
+                margin-left: 80px;
+            }
+        </style>
+	</head>
+    
+	<body>
+        <div>
+            用户名：<input id="userName" /><br />
+            手机号：<input id="tel" /><br />
+            <input type="button" id="myButton" value="提交"/>
+        </div>
+		
+	</body>
+	<script>
+        
+        function $(id) {
+            return document.getElementById(id);
+        }
+    
+        function iniint_fa() {
+            var btn = $('myButton');
+            btn.addEventListener("click", check, false)
+        }
+        
+        function addPElement(mess) {
+            var pE = document.createElement("h3");
+            var tXt = document.createTextNode(mess);
+            pE.appendChild(tXt);
+            document.body.appendChild(pE);
+            return "asdasdad";
+        }
+        
+        function check() {
+            var userP = $("userName");
+            var phoneP = $("tel");
+            var inputUserValue = userP.value;
+            var inputPhoneValue = phoneP.value;
+            
+            if(inputUserValue.length <= 0) {
+<!--                JS2OCAction('message1');-->
+                alert("请输入用户名");
+                return;
+            }
+            if(inputPhoneValue.length <= 0) {
+                alert("请输入手机号");
+<!--                JS2OCAction('message2');-->
+                return;
+            }
+            var params = "name="+inputUserValue+"&phone="+inputPhoneValue;
+            JS2OCAction('second',params);
+        }
+    
+        function JS2OCAction(path, params) {
+            var url = 'bkroute://urlroute.black.com/'+path+'?'+params;
+            console.log('url: '+url);
+            var iframe = document.createElement('iframe');
+            iframe.style.width = '1px';
+            iframe.style.height = '1px';
+            iframe.style.display = 'none';
+            iframe.src = url;
+            document.body.appendChild(iframe);
+            setTimeout(function() {
+                   iframe.remove();
+                   }, 100);
+        }
+    
+        window.addEventListener("load", iniint_fa, false);
+    </script>
+</html>

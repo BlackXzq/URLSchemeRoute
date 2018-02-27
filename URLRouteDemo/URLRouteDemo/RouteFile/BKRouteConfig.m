@@ -12,6 +12,10 @@
 @implementation BKRouteConfig
 + (void)config {
     BKRoutes *routes = [BKRoutes defaultRoutes];
-    
+    [routes addRoute:[Route routeWithPattern:@"/first" className:@"FirstViewController"]];
+    [routes addRoute:[Route routeWithPattern:@"/second" className:@"SecondViewController"]];
+    [routes addRoute:[Route routeWithPattern:@"/log" block:^(NSString *path, NSDictionary *info) {
+        NSLog(@"XxXXXXXXXXXXXXX");
+    }]];
 }
 @end
